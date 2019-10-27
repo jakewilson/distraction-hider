@@ -6,11 +6,16 @@
     "content_scripts": [
         {
             "matches": ["*://*.github.com/*"],
-            "js": ["github.js"]
+            "js": ["src/github.js"]
         },
         {
             "matches": ["*://*.youtube.com/*"],
-            "js": ["youtube.js"]
+            "exclude_matches": ["*://*.youtube.com/watch*"],
+            "js": ["src/youtube.js"]
+        },
+        {
+            "matches": ["*://*.stackoverflow.com/*", "*://*.stackexchange.com/*"],
+            "js": ["src/so.js"]
         }
     ]
 }
