@@ -1,0 +1,16 @@
+{
+    "name": "Distraction Hider",
+    "description": "idk",
+    "manifest_version": 2,
+    "version": "0.0.1",
+    "content_scripts": [
+        {
+            "matches": ["*://*.github.com/*"],
+            "js": ["github.js"]
+        },
+        {
+            "matches": ["*://*.youtube.com/*"],
+            "js": ["youtube.js"]
+        }
+    ]
+}
